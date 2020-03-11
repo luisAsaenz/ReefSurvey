@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ReefSurvey
 {
-    public partial class Surveys
+    public class Survey
     {
         public int SurveyId { get; set; }
         public int StudyAreaId { get; set; }
@@ -17,10 +17,10 @@ namespace ReefSurvey
         public double Length { get; set; }
         public int Count { get; set; }
 
-        public virtual Batches Batch { get; set; }
-        public virtual Managements Management { get; set; }
+        public virtual Batch Batch { get; set; }
+        public virtual Management Management { get; set; }
         public virtual Species Species { get; set; }
-        public virtual Structures Structure { get; set; }
-        public virtual StudyAreas StudyArea { get; set; }
+        public virtual Structure Structure { get; set; }
+        public virtual StudyArea StudyArea { get; set; }
     }
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace ReefSurvey
 {
-    public partial class Species
+    public class Species
     {
         public Species()
         {
-            Surveys = new HashSet<Surveys>();
+            Surveys = new List<Survey>();
         }
 
         public int SpeciesId { get; set; }
@@ -16,7 +16,7 @@ namespace ReefSurvey
         public string CommonName { get; set; }
         public string Trophic { get; set; }
 
-        public virtual Genera SpeciesNavigation { get; set; }
-        public virtual ICollection<Surveys> Surveys { get; set; }
+        public virtual Genus Genus { get; set; }
+        public virtual List<Survey> Surveys { get; set; }
     }
 }

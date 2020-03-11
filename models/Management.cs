@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace ReefSurvey
 {
-    public partial class Managements
+    public class Management
     {
-        public Managements()
+        public Management()
         {
-            Surveys = new HashSet<Surveys>();
+            Surveys = new HashSet<Survey>();
         }
 
         public int ManagementId { get; set; }
         public string Name { get; set; }
 
-        public virtual ICollection<Surveys> Surveys { get; set; }
+        public virtual ICollection<Survey> Surveys { get; set; }
     }
 }

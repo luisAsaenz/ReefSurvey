@@ -3,18 +3,18 @@ using System.Collections.Generic;
 
 namespace ReefSurvey
 {
-    public partial class StudyAreas
+    public class StudyArea
     {
-        public StudyAreas()
+        public StudyArea()
         {
-            Surveys = new HashSet<Surveys>();
+            Surveys = new List<Survey>();
         }
 
         public int StudyAreaId { get; set; }
         public int SubRegionId { get; set; }
         public string Name { get; set; }
 
-        public virtual SubRegions StudyArea { get; set; }
-        public virtual ICollection<Surveys> Surveys { get; set; }
+        public virtual SubRegion SubRegion { get; set; }
+        public virtual List<Survey> Surveys { get; set; }
     }
 }
