@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReefSurvey", "ReefSurvey.csproj", "{873F3012-3666-48AB-BBC3-687D32EA67D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReefSurvey", "ReefSurvey.csproj", "{873F3012-3666-48AB-BBC3-687D32EA67D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReefSurveyTests", "..\ReefSurveyTests\ReefSurveyTests.csproj", "{7AEED302-0BC6-40C5-89C1-78CB24A77B1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{873F3012-3666-48AB-BBC3-687D32EA67D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{873F3012-3666-48AB-BBC3-687D32EA67D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{873F3012-3666-48AB-BBC3-687D32EA67D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEED302-0BC6-40C5-89C1-78CB24A77B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEED302-0BC6-40C5-89C1-78CB24A77B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEED302-0BC6-40C5-89C1-78CB24A77B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEED302-0BC6-40C5-89C1-78CB24A77B1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
