@@ -1,5 +1,4 @@
-﻿using DocumentFormat.OpenXml.ExtendedProperties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,9 +11,9 @@ namespace ReefSurvey
             string phrase = "The quick brown cow";
             string[] words = phrase.Split(' ');
 
-            foreach (var word in words) ;
+            foreach (var word in words) 
             {
-                System.Console.WriteLine($"<{words}>");
+                System.Console.WriteLine($"<{word}>");
             }
 
        }
