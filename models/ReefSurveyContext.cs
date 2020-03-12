@@ -15,16 +15,16 @@ namespace ReefSurvey
         {
         }
 
-        public virtual DbSet<Batches> Batches { get; set; }
-        public virtual DbSet<Families> Families { get; set; }
-        public virtual DbSet<Genera> Genera { get; set; }
-        public virtual DbSet<Managements> Managements { get; set; }
-        public virtual DbSet<Regions> Regions { get; set; }
+        public virtual DbSet<Batch> Batches { get; set; }
+        public virtual DbSet<Family> Families { get; set; }
+        public virtual DbSet<Genus> Genera { get; set; }
+        public virtual DbSet<Management> Managements { get; set; }
+        public virtual DbSet<Region> Regions { get; set; }
         public virtual DbSet<Species> Species { get; set; }
-        public virtual DbSet<Structures> Structures { get; set; }
-        public virtual DbSet<StudyAreas> StudyAreas { get; set; }
-        public virtual DbSet<SubRegions> SubRegions { get; set; }
-        public virtual DbSet<Surveys> Surveys { get; set; }
+        public virtual DbSet<Structure> Structures { get; set; }
+        public virtual DbSet<StudyArea> StudyAreas { get; set; }
+        public virtual DbSet<SubRegion> SubRegions { get; set; }
+        public virtual DbSet<Survey> Surveys { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -37,7 +37,7 @@ namespace ReefSurvey
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Batches>(entity =>
+            modelBuilder.Entity<Batch>(entity =>
             {
                 entity.HasKey(e => e.BatchId);
 
@@ -46,14 +46,14 @@ namespace ReefSurvey
                     .IsFixedLength();
             });
 
-            modelBuilder.Entity<Families>(entity =>
+            modelBuilder.Entity<Family>(entity =>
             {
                 entity.HasKey(e => e.FamilyId);
 
                 entity.Property(e => e.Name).IsUnicode(false);
             });
 
-            modelBuilder.Entity<Genera>(entity =>
+            modelBuilder.Entity<Genus>(entity =>
             {
                 entity.HasKey(e => e.GenusId);
 
@@ -68,14 +68,14 @@ namespace ReefSurvey
                     .HasConstraintName("FK_Families_Genera");
             });
 
-            modelBuilder.Entity<Managements>(entity =>
+            modelBuilder.Entity<Management>(entity =>
             {
                 entity.HasKey(e => e.ManagementId);
 
                 entity.Property(e => e.Name).IsUnicode(false);
             });
 
-            modelBuilder.Entity<Regions>(entity =>
+            modelBuilder.Entity<Region>(entity =>
             {
                 entity.HasKey(e => e.RegionId);
 
@@ -102,7 +102,7 @@ namespace ReefSurvey
                     .HasConstraintName("FK_Genera_Species");
             });
 
-            modelBuilder.Entity<Structures>(entity =>
+            modelBuilder.Entity<Structure>(entity =>
             {
                 entity.HasKey(e => e.StructureId);
 
@@ -111,7 +111,7 @@ namespace ReefSurvey
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<StudyAreas>(entity =>
+            modelBuilder.Entity<StudyArea>(entity =>
             {
                 entity.HasKey(e => e.StudyAreaId);
 
@@ -128,7 +128,7 @@ namespace ReefSurvey
                     .HasConstraintName("FK_SubRegions_StudyAreas");
             });
 
-            modelBuilder.Entity<SubRegions>(entity =>
+            modelBuilder.Entity<SubRegion>(entity =>
             {
                 entity.HasKey(e => e.SubRegionId);
 
@@ -143,7 +143,7 @@ namespace ReefSurvey
                     .HasConstraintName("FK_Regions_SubRegions");
             });
 
-            modelBuilder.Entity<Surveys>(entity =>
+            modelBuilder.Entity<Survey>(entity =>
             {
                 entity.HasKey(e => e.SurveyId);
 
