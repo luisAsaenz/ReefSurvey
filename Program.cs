@@ -7,6 +7,8 @@ namespace ReefSurvey
 		static void Main(string[] args)
 		{
 			Console.WriteLine("Hello World!");
+
+			Parse.Parsetest();
 		}
 	}
 }
