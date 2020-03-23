@@ -8,7 +8,7 @@ namespace ReefSurvey
         public int SurveyId { get; set; }
         public int StudyAreaId { get; set; }
         public string BatchId { get; set; }
-        public int Index { get; set; }
+        public string Index { get; set; }
         public DateTime Date { get; set; }
         public string Coordinates { get; set; }
         public int ManagementId { get; set; }
