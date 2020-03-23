@@ -14,4 +14,5 @@ and the latter reads the raw reef survey data and converts the CSV files into st
 1. Clone repository.
 2. Create empty database using model hierarchy.
 3. Update SQL Server data source in `models/ReefSurveyContext.cs`.
+3. Update raw data paths in `libraries/Reader.cs`.
 4. Compile and run.
